@@ -1,0 +1,25 @@
+<html>
+
+<body>
+    <p>
+        <div id="sensor"></div>
+    </p>
+    <script src="https://www.gstatic.com/firebasejs/4.12.1/firebase.js"></script>
+    <script>
+        var config = {
+            //apiKey: "nefry-cef61",
+            //authDomain: "projectId.firebaseapp.com",
+            databaseURL: "https://nefry-b2994.firebaseio.com", // ここの値を変更
+            //storageBucket: "bucket.appspot.com"
+        };
+        firebase.initializeApp(config);
+        var database = firebase.database();
+        var dataRef = database.ref('/Nefry');
+        dataRef.once("value")
+            .then(function (snapshot) {
+                document.getElementById("sensor").innerHTML = snapshot.child("sensor").val();
+            });
+    </script>
+</body>
+
+</html>
