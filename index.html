@@ -385,27 +385,262 @@ blockquote {
 
 </head>
 <body>
-<h1 id="iot%E5%8B%89%E5%BC%B7%E4%BC%9A%E8%B3%87%E6%96%99">IoT勉強会資料</h1>
-<h2 id="nefry%E3%81%A8ifttt%E3%81%A7%E3%83%8E%E3%83%B3%E3%83%97%E3%83%AD%E3%82%B0%E3%83%A9%E3%83%A0%E3%81%A7tweet%E3%82%92%E8%A1%8C%E3%81%86">NefryとIFTTTでノンプログラムでtweetを行う</h2>
+<!-- $theme: default -->
+<!-- page_number: true -->
+<!-- $size: 4:3 -->
+<h1 id="iot%E3%83%8F%E3%83%83%E3%82%AB%E3%82%BD%E3%83%B3-%E3%80%9Cbusiness%E3%80%9C-%E4%BA%8B%E5%89%8D%E5%8B%89%E5%BC%B7%E4%BC%9A%E3%80%90nefry%E3%81%A7iot%E3%83%8F%E3%83%B3%E3%82%BA%E3%82%AA%E3%83%B3%E3%80%91day-1">IoTハッカソン 〜business〜 事前勉強会【NefryでIoTハンズオン】Day 1</h1>
+<hr>
+<h1 id="%E7%9B%AE%E6%AC%A1">目次</h1>
+<ol>
+<li>
+<p>ノンプログラミングでTwitter投稿を行ってみよう</p>
+</li>
+<li>
+<p>LEDを光らせるプログラムを書いてみよう</p>
+</li>
+<li>
+<p>光センサの情報を取得して記録してみよう</p>
+</li>
+</ol>
+<hr>
+<h1 id="1nefry%E3%81%A8ifttt%E3%82%92%E7%94%A8%E3%81%84%E3%81%A6%E3%83%8E%E3%83%B3%E3%83%97%E3%83%AD%E3%82%B0%E3%83%A9%E3%83%9F%E3%83%B3%E3%82%B0%E3%81%A7twitter%E6%8A%95%E7%A8%BF%E3%82%92%E8%A1%8C%E3%81%8A%E3%81%86">1.NefryとIFTTTを用いて
+ノンプログラミングでTwitter投稿を行おう</h1>
 <p>https://dotstud.io/docs/nefrybt-ifttt/</p>
+<p><img src="img/039.png" alt="70% center"></p>
 <hr>
-<h2 id="l%E3%83%81%E3%82%AB">Lチカ</h2>
-<p>ここではNefry BTに対してプログラムを書きこむ方法を学ぶ<br>
-https://dotstud.io/docs/nefrybt-led/</p>
-<h3 id="%E3%81%86%E3%81%BE%E3%81%8F%E3%83%97%E3%83%AD%E3%82%B0%E3%83%A9%E3%83%A0%E3%81%8C%E6%9B%B8%E3%81%8D%E8%BE%BC%E3%82%81%E3%81%AA%E3%81%84%E5%A0%B4%E5%90%88%E3%81%AF">うまくプログラムが書き込めない場合は</h3>
-<p>設定を以下のように変えてみよう</p>
-<blockquote>
-<p>ツール &gt;　Upload Speed : 460800<br>
-ツール &gt; ボード: Nefry BT</p>
-</blockquote>
+<h3 id="nefry-bt%E3%81%A8%E3%81%AF">Nefry BTとは?</h3>
+<p>IFTTT等のインターネットのサービスとハードウェアを簡単に接続できるIoTデバイス. Wi-Fi / BLE通信モジュール「ESP-WROOM-32」を搭載</p>
+<p><img src="img/009.png" alt="center"></p>
+<h3 id="ifttt-if-this-then-that-%E3%81%A8%E3%81%AF%EF%BC%9F">IFTTT (if this, then that) とは？</h3>
+<p>LINE, Twitter, Slack など，様々なWebサービス同士を
+簡単に連携(レシピと呼ぶ)できるサービス</p>
+<p><img src="img/insta.png" alt=""><img src="img/twitter.png" alt=""><img src="img/sms22.png" alt=""><img src="img/ios.png" alt=""><img src="img/rss.png" alt=""><img src="img/google.png" alt=""></p>
+<h3 id="nefry%E3%81%A8ifttt%E9%80%A3%E6%90%BA%E3%81%AE%E6%89%8B%E9%A0%86">NefryとIFTTT連携の手順</h3>
+<p>⑴ IFTTTにレシピを作成 → ⑵ Secret Key を取得<br>
+→ ⑶ Nefry BT の設定ページでSecret Key を登録</p>
 <hr>
-<h2 id="%E3%82%BB%E3%83%B3%E3%82%B5%E3%81%AB%E3%82%88%E3%82%8B%E3%83%87%E3%83%BC%E3%82%BF%E3%81%AE%E5%8F%96%E5%BE%97">センサによるデータの取得</h2>
-<p>ここからはNefryに外部のセンサーを取り付けてセンサの値を取得する方法を学ぶ。</p>
+<h1 id="0-ifttttwitter-%E3%81%AE%E3%82%A2%E3%82%AB%E3%82%A6%E3%83%B3%E3%83%88%E4%BD%9C%E6%88%90">(0) IFTTT,twitter のアカウント作成</h1>
+<ul>
+<li>IFTTTのアカウントを作成 https://ifttt.com</li>
+</ul>
+<p><img src="img/036.png" alt="center"></p>
+<ul>
+<li>(アカウントを取得していない人のみ)
+twitter のアカウントを作成 https://twitter.com/</li>
+</ul>
+<p><img src="img/038.png" alt="center"></p>
 <hr>
-<h1 id="%E5%85%89%E3%82%BB%E3%83%B3%E3%82%B5%E3%81%AE%E5%80%A4%E3%82%92firebase%E3%81%AB%E9%80%81%E4%BF%A1%E3%81%97%E3%81%A6%E8%A8%98%E9%8C%B2%E3%81%99%E3%82%8B">光センサの値をfirebaseに送信して記録する</h1>
-<h2 id="%E5%85%89%E3%82%BB%E3%83%B3%E3%82%B5%E3%81%AE%E5%80%A4%E3%82%92%E7%A2%BA%E8%AA%8D%E3%81%99%E3%82%8B">光センサの値を確認する</h2>
-<p>Nefry BTのA2と書かれたソケットに光センサを接続する。<br>
-Arduino IDEから以下のプログラムを書き込んで実行する</p>
+<h1 id="%E2%91%B4-ifttt%E3%81%AB%E3%83%AC%E3%82%B7%E3%83%94%E3%82%92%E4%BD%9C%E6%88%90">⑴ IFTTTにレシピを作成</h1>
+<p>レシピ：
+if <font color="Red">this</font> then <font color="Blue">that</font></p>
+<p><font color="Red">〇〇</font> が起きたら <font color="Blue">△△</font> する</p>
+<p><font color="Red">Nefryのボタンを押し</font> たら <font color="Blue">IFTTTのWebhooksにアクセス</font> する</p>
+<hr>
+<h2 id="%E2%91%B4-ifttt%E3%81%AB%E3%83%AC%E3%82%B7%E3%83%94%E3%82%92%E4%BD%9C%E6%88%90">⑴ IFTTTにレシピを作成</h2>
+<p><font color="Red">[Thisの設定]　</font>「+this」 をクリック</p>
+<p><img src="img/012.png" alt="center"></p>
+<hr>
+<h2 id="%E2%91%B4-ifttt%E3%81%AB%E3%83%AC%E3%82%B7%E3%83%94%E3%82%92%E4%BD%9C%E6%88%90">⑴ IFTTTにレシピを作成</h2>
+<p><font color="Red">[Thisの設定]</font>webhooksを検索し，webhooksのアイコンをクリック</p>
+<p><img src="img/011.png" alt="center"></p>
+<hr>
+<h2 id="%E2%91%B4-ifttt%E3%81%AB%E3%83%AC%E3%82%B7%E3%83%94%E3%82%92%E4%BD%9C%E6%88%90">⑴ IFTTTにレシピを作成</h2>
+<p><font color="Red">[Thisの設定]</font>「Receive a web request」 をクリック</p>
+<p><img src="img/013.png" alt="center"></p>
+<hr>
+<h2 id="%E2%91%B4-ifttt%E3%81%AB%E3%83%AC%E3%82%B7%E3%83%94%E3%82%92%E4%BD%9C%E6%88%90">⑴ IFTTTにレシピを作成</h2>
+<p><font color="Red">[Thisの設定]</font>
+Event Nameに Nefry_IFTTT と記入し,「Create trigger」をクリック</p>
+<p><img src="img/014.png" alt="center"></p>
+<hr>
+<h2 id="%E2%91%B4-ifttt%E3%81%AB%E3%83%AC%E3%82%B7%E3%83%94%E3%82%92%E4%BD%9C%E6%88%90">⑴ IFTTTにレシピを作成</h2>
+<p><font color="Blue">[Thatの設定]</font>「+that」 をクリック</p>
+<p><img src="img/020.png" alt="center"></p>
+<hr>
+<h2 id="%E2%91%B4-ifttt%E3%81%AB%E3%83%AC%E3%82%B7%E3%83%94%E3%82%92%E4%BD%9C%E6%88%90">⑴ IFTTTにレシピを作成</h2>
+<p><font color="Blue">[Thatの設定]</font>twitter を検索し，twitterのアイコンをクリック</p>
+<p><img src="img/015.png" alt="center"></p>
+<hr>
+<h2 id="%E2%91%B4-ifttt%E3%81%AB%E3%83%AC%E3%82%B7%E3%83%94%E3%82%92%E4%BD%9C%E6%88%90">⑴ IFTTTにレシピを作成</h2>
+<p><font color="Blue">[Thatの設定]</font>「Post a tweet」をクリック</p>
+<p><img src="img/016.png" alt="center"></p>
+<hr>
+<h2 id="%E2%91%B4-ifttt%E3%81%AB%E3%83%AC%E3%82%B7%E3%83%94%E3%82%92%E4%BD%9C%E6%88%90">⑴ IFTTTにレシピを作成</h2>
+<p><font color="Blue">[Thatの設定]</font>Tweet text 欄にツイートしたい内容を入力し，
+(例:【Bot】Nefry BTとIFTTT連携test )
+「Create action」 をクリック</p>
+<p><img src="img/017.png" alt="center"></p>
+<hr>
+<h2 id="%E2%91%B4-ifttt%E3%81%AB%E3%83%AC%E3%82%B7%E3%83%94%E3%82%92%E4%BD%9C%E6%88%90">⑴ IFTTTにレシピを作成</h2>
+<p><font color="Blue">[Thatの設定]</font>「Finish」をクリック</p>
+<p><img src="img/021.png" alt="center"></p>
+<p>これで, 「<font color="Red">Nefryのボタンを押し</font>たら<font color="Blue">IFTTTのWebhooksにアクセス</font>する」レシピの作成完了です．</p>
+<hr>
+<h1 id="%E2%91%B5-webhooks%E3%81%AEsecret-key-%E3%82%92%E5%8F%96%E5%BE%97">⑵ webhooksのSecret Key を取得</h1>
+<hr>
+<h2 id="%E2%91%B5-secret-key-%E3%82%92%E5%8F%96%E5%BE%97">⑵ Secret Key を取得</h2>
+<p>webhooks で検索</p>
+<p><img src="img/022.png" alt="center"></p>
+<hr>
+<h2 id="%E2%91%B5-secret-key-%E3%82%92%E5%8F%96%E5%BE%97">⑵ Secret Key を取得</h2>
+<p>「Services」をクリックし，webhooksのアイコンをクリック</p>
+<p><img src="img/023.png" alt="center"></p>
+<hr>
+<h2 id="%E2%91%B5-secret-key-%E3%82%92%E5%8F%96%E5%BE%97">⑵ Secret Key を取得</h2>
+<p>右上の「Settings」をクリック</p>
+<p><img src="img/024.png" alt="center"></p>
+<hr>
+<h2 id="%E2%91%B5-secret-key-%E3%82%92%E5%8F%96%E5%BE%97">⑵ Secret Key を取得</h2>
+<p>URLの末尾の自身のSecret Keyをコピー</p>
+<p><img src="img/040.png" alt="center"></p>
+<p>次に，コピーしたWebhooksの Secret Key を Nefry に登録します．</p>
+<hr>
+<h1 id="%E2%91%B6nefry-bt%E3%81%AE%E8%A8%AD%E5%AE%9A%E3%83%9A%E3%83%BC%E3%82%B8%E3%81%A7secret-key%E3%82%92%E7%99%BB%E9%8C%B2">⑶Nefry BTの設定ページでSecret Keyを登録</h1>
+<hr>
+<h2 id="%E2%91%B6-nefry-bt-%E3%81%AE%E8%A8%AD%E5%AE%9A%E3%83%9A%E3%83%BC%E3%82%B8%E3%81%A7secret-key-%E3%82%92%E7%99%BB%E9%8C%B2">⑶ Nefry BT の設定ページでSecret Key を登録</h2>
+<h3 id="wifi%E8%A8%AD%E5%AE%9A">wifi設定</h3>
+<ul>
+<li>Nefry BTを自分のPCに接続．</li>
+<li>&quot;NefryBT-(数字)&quot;というWi-Fiに接続．</li>
+</ul>
+<p><img src="./img/035.png" alt="center"></p>
+<p>Wi-Fiに接続すると自動で設定ページのウィンドウが立ち上がる．
+（立ち上がらない場合はブラウザでhttp://192.168.4.1にアクセス）</p>
+<p>このページからNefry BTに関する様々な設定が可能．</p>
+<p><img src="./img/nefry_top_page.png" alt="center"></p>
+<hr>
+<h2 id="%E2%91%B6-nefry-bt-%E3%81%AE%E8%A8%AD%E5%AE%9A%E3%83%9A%E3%83%BC%E3%82%B8%E3%81%A7secret-key-%E3%82%92%E7%99%BB%E9%8C%B2">⑶ Nefry BT の設定ページでSecret Key を登録</h2>
+<h3 id="wifi%E8%A8%AD%E5%AE%9A">wifi設定</h3>
+<p>「Setup WiFi」をクリックし，利用するWi-FiのSSIDとパスワードを入力し，「Save」で保存．</p>
+<p><img src="./img/nefry_top_page.png" alt=" "><img src="./img/setup_wifi.png" alt=""></p>
+<p>再度，Nefry BTのWi-Fiにつなぎ，トップ画面を開くと，
+利用するWi-FiのSSIDとNefry BTのIPアドレスが表示される．</p>
+<hr>
+<h2 id="%E2%91%B6-nefry-bt-%E3%81%AE%E8%A8%AD%E5%AE%9A%E3%83%9A%E3%83%BC%E3%82%B8%E3%81%A7secret-key-%E3%82%92%E7%99%BB%E9%8C%B2">⑶ Nefry BT の設定ページでSecret Key を登録</h2>
+<p>トップ画面から「Data Store」に移動．</p>
+<p><img src="img/026.png" alt="center"></p>
+<hr>
+<h2 id="%E2%91%B6-nefry-bt-%E3%81%AE%E8%A8%AD%E5%AE%9A%E3%83%9A%E3%83%BC%E3%82%B8%E3%81%A7secret-key-%E3%82%92%E7%99%BB%E9%8C%B2">⑶ Nefry BT の設定ページでSecret Key を登録</h2>
+<p>先ほど取得したWebhooksの「Secret Key」と「Event Name」を
+それぞれ入力し，保存．</p>
+<p><img src="img/027.png" alt="center"></p>
+<hr>
+<h2 id="%E2%91%B6-nefry-bt-%E3%81%AE%E8%A8%AD%E5%AE%9A%E3%83%9A%E3%83%BC%E3%82%B8%E3%81%A7secret-key-%E3%82%92%E7%99%BB%E9%8C%B2">⑶ Nefry BT の設定ページでSecret Key を登録</h2>
+<p>Nefry BTのボタンを押して試してみましょう！</p>
+<p><img src="img/028.png" alt="center"></p>
+<p>Nefryのボタンを押すとTweetすることができました！
+（IFTTTのサーバ状況により送信に時間がかかる場合があります．）</p>
+<hr>
+<h1 id="2led%E3%82%92%E5%85%89%E3%82%89%E3%81%9B%E3%82%8B%E3%83%97%E3%83%AD%E3%82%B0%E3%83%A9%E3%83%A0%E3%82%92%E6%9B%B8%E3%81%84%E3%81%A6%E3%81%BF%E3%82%88%E3%81%86">2.LEDを光らせるプログラムを書いてみよう</h1>
+<p>https://dotstud.io/docs/nefrybt-led/</p>
+<hr>
+<h2 id="2led%E3%82%92%E5%85%89%E3%82%89%E3%81%9B%E3%82%8B%E3%83%97%E3%83%AD%E3%82%B0%E3%83%A9%E3%83%A0%E3%82%92%E6%9B%B8%E3%81%84%E3%81%A6%E3%81%BF%E3%82%88%E3%81%86">2.LEDを光らせるプログラムを書いてみよう</h2>
+<h3 id="0%E6%BA%96%E5%82%99">(0)準備</h3>
+<ul>
+<li>
+<p>Arduino インストール　https://dotstud.io/docs/arduinoide-setup/</p>
+</li>
+<li>
+<p>Arduino セットアップ  https://dotstud.io/docs/nefrybt-arduino-ide-setup/</p>
+</li>
+</ul>
+<hr>
+<h2 id="2led%E3%82%92%E5%85%89%E3%82%89%E3%81%9B%E3%82%8B%E3%83%97%E3%83%AD%E3%82%B0%E3%83%A9%E3%83%A0%E3%82%92%E6%9B%B8%E3%81%84%E3%81%A6%E3%81%BF%E3%82%88%E3%81%86">2.LEDを光らせるプログラムを書いてみよう</h2>
+<h3 id="0%E6%BA%96%E5%82%99-arduino-%E3%82%A4%E3%83%B3%E3%82%B9%E3%83%88%E3%83%BC%E3%83%AB">(0)準備  Arduino インストール</h3>
+<p>Arduinoのサイトから自身の環境に合わせたダウンロードリンクを選択．次のページでドネーション（寄付金）を求められますが，特に気にせず「JUST DOWNLOAD」を選択し，インストール．</p>
+<p><img src="img/aruduino_install.png" alt=" "><img src="img/aruduino_.png" alt=" "></p>
+<hr>
+<h2 id="2led%E3%82%92%E5%85%89%E3%82%89%E3%81%9B%E3%82%8B%E3%83%97%E3%83%AD%E3%82%B0%E3%83%A9%E3%83%A0%E3%82%92%E6%9B%B8%E3%81%84%E3%81%A6%E3%81%BF%E3%82%88%E3%81%86">2.LEDを光らせるプログラムを書いてみよう</h2>
+<h3 id="0%E6%BA%96%E5%82%99-arduino-%E3%82%A4%E3%83%B3%E3%82%B9%E3%83%88%E3%83%BC%E3%83%AB">(0)準備  Arduino インストール</h3>
+<p>Arduinoファイルを起動し，下記のような画面が表示されれば起動完了．</p>
+<p><img src="img/first.png" alt="center"></p>
+<hr>
+<h2 id="2led%E3%82%92%E5%85%89%E3%82%89%E3%81%9B%E3%82%8B%E3%83%97%E3%83%AD%E3%82%B0%E3%83%A9%E3%83%A0%E3%82%92%E6%9B%B8%E3%81%84%E3%81%A6%E3%81%BF%E3%82%88%E3%81%86">2.LEDを光らせるプログラムを書いてみよう</h2>
+<h3 id="0%E6%BA%96%E5%82%99-arduino-%E3%82%BB%E3%83%83%E3%83%88%E3%82%A2%E3%83%83%E3%83%97">(0)準備  Arduino セットアップ</h3>
+<p>メニューのArduino &gt; Preferencesを選択．追加のボードマネージャのURLのフォームに以下のURLを追加し，OKを選択．</p>
+<p><code>http://nefry.studio/package_nefrybt_index.json</code></p>
+<p><img src="img/arduino_setup.png" alt="center"></p>
+<hr>
+<h2 id="2led%E3%82%92%E5%85%89%E3%82%89%E3%81%9B%E3%82%8B%E3%83%97%E3%83%AD%E3%82%B0%E3%83%A9%E3%83%A0%E3%82%92%E6%9B%B8%E3%81%84%E3%81%A6%E3%81%BF%E3%82%88%E3%81%86">2.LEDを光らせるプログラムを書いてみよう</h2>
+<h3 id="0%E6%BA%96%E5%82%99-arduino-%E3%82%BB%E3%83%83%E3%83%88%E3%82%A2%E3%83%83%E3%83%97">(0)準備  Arduino セットアップ</h3>
+<p>メニューのツール &gt; ボード &gt; ボードマネージャを選択．</p>
+<p><img src="img/boardmanager.png" alt="center"></p>
+<hr>
+<h2 id="2led%E3%82%92%E5%85%89%E3%82%89%E3%81%9B%E3%82%8B%E3%83%97%E3%83%AD%E3%82%B0%E3%83%A9%E3%83%A0%E3%82%92%E6%9B%B8%E3%81%84%E3%81%A6%E3%81%BF%E3%82%88%E3%81%86">2.LEDを光らせるプログラムを書いてみよう</h2>
+<h3 id="0%E6%BA%96%E5%82%99-arduino-%E3%82%BB%E3%83%83%E3%83%88%E3%82%A2%E3%83%83%E3%83%97">(0)準備  Arduino セットアップ</h3>
+<p>フォームにNefryと入力して検索する．</p>
+<p><img src="img/nefry_serach.png" alt="center"></p>
+<p>バージョン1.4.0 を選択し，インストールを押す
+(バージョンは1.2.2以上のものを選択)</p>
+<hr>
+<h2 id="2led%E3%82%92%E5%85%89%E3%82%89%E3%81%9B%E3%82%8B%E3%83%97%E3%83%AD%E3%82%B0%E3%83%A9%E3%83%A0%E3%82%92%E6%9B%B8%E3%81%84%E3%81%A6%E3%81%BF%E3%82%88%E3%81%86">2.LEDを光らせるプログラムを書いてみよう</h2>
+<h3 id="1%E3%83%9C%E3%83%BC%E3%83%89%E3%81%AE%E9%81%B8%E6%8A%9E">(1)ボードの選択</h3>
+<p>メニューのツール &gt; ボード &gt; Nefry BT R2/R3を選択．</p>
+<p><img src="img/029.png" alt="center"></p>
+<hr>
+<h2 id="2led%E3%82%92%E5%85%89%E3%82%89%E3%81%9B%E3%82%8B%E3%83%97%E3%83%AD%E3%82%B0%E3%83%A9%E3%83%A0%E3%82%92%E6%9B%B8%E3%81%84%E3%81%A6%E3%81%BF%E3%82%88%E3%81%86">2.LEDを光らせるプログラムを書いてみよう</h2>
+<h3 id="2nefry-bt%E3%82%92pc%E3%81%AEusb%E3%83%9D%E3%83%BC%E3%83%88%E3%81%AB%E6%8C%BF%E5%85%A5">(2)Nefry BTをPCのUSBポートに挿入</h3>
+<ul>
+<li>Nefry BTをPCのUSBポートに挿入．</li>
+<li>メニューのツール &gt; シリアルポート &gt; /dev/cu.usbserial-xxxxxx を選択．(環境によっては /dev/tty.usbserial-xxxxxxなどの場合あり)</li>
+</ul>
+<p>※Windowsだと表記が異なる可能性あり</p>
+<hr>
+<h2 id="2led%E3%82%92%E5%85%89%E3%82%89%E3%81%9B%E3%82%8B%E3%83%97%E3%83%AD%E3%82%B0%E3%83%A9%E3%83%A0%E3%82%92%E6%9B%B8%E3%81%84%E3%81%A6%E3%81%BF%E3%82%88%E3%81%86">2.LEDを光らせるプログラムを書いてみよう</h2>
+<h3 id="3%E3%83%97%E3%83%AD%E3%82%B0%E3%83%A9%E3%83%A0%E3%81%AE%E6%9B%B8%E3%81%8D%E8%BE%BC%E3%81%BF">(3)プログラムの書き込み</h3>
+<p>Arduinoを選択し，メニューのファイル &gt; 新規ファイルを選択．</p>
+<p><img src="img/030.png" alt="center"></p>
+<hr>
+<p>初期状態で書かれているコードを削除し,以下のコードに差し替える</p>
+<pre class="hljs"><code><div>#include &lt;Nefry.h&gt;
+//フルカラーLED　ランダムにカラーが変わります．
+#define SEED_PIN A0
+
+void setup() {
+  randomSeed(analogRead(SEED_PIN));
+}
+
+int red,green,blue;
+void loop() {
+  red=random(255);//random関数は0-255の数値をランダムに返します．
+  green=random(255);
+  blue=random(255);
+  Nefry.setLed(red,green,blue);//LEDがランダムに点灯します．
+  String color=&quot;Red:&quot;;color+=red;
+  color+=&quot; Green:&quot;;color+=green;
+  color+=&quot; Blue:&quot;;color+=blue;
+  Nefry.ndelay(1000);//1秒待つ
+}
+</div></code></pre>
+<p>※A0を指定していますが，乱数のSeed用に使っているだけで，
+内蔵のLEDがA0という訳ではないです．</p>
+<hr>
+<h2 id="2led%E3%82%92%E5%85%89%E3%82%89%E3%81%9B%E3%82%8B%E3%83%97%E3%83%AD%E3%82%B0%E3%83%A9%E3%83%A0%E3%82%92%E6%9B%B8%E3%81%84%E3%81%A6%E3%81%BF%E3%82%88%E3%81%86">2.LEDを光らせるプログラムを書いてみよう</h2>
+<h3 id="4%E3%83%97%E3%83%AD%E3%82%B0%E3%83%A9%E3%83%A0%E3%81%AE%E4%BF%9D%E5%AD%98%E3%81%A8%E3%83%9C%E3%83%BC%E3%83%89%E3%81%AB%E6%9B%B8%E3%81%8D%E8%BE%BC%E3%81%BF">(4)プログラムの保存とボードに書き込み</h3>
+<p>左上の → ボタンを押し，ボード（Nefry BT）にプログラムを書き込む．</p>
+<p><img src="img/030.png" alt=" center"></p>
+<hr>
+<h2 id="2led%E3%82%92%E5%85%89%E3%82%89%E3%81%9B%E3%82%8B%E3%83%97%E3%83%AD%E3%82%B0%E3%83%A9%E3%83%A0%E3%82%92%E6%9B%B8%E3%81%84%E3%81%A6%E3%81%BF%E3%82%88%E3%81%86">2.LEDを光らせるプログラムを書いてみよう</h2>
+<h3 id="5%E7%A2%BA%E8%AA%8D">(5)確認</h3>
+<p>無事にプログラム書き込みが終わると，Nefry BTに内蔵してあるLEDがカラフルに光ります．</p>
+<p>※プログラムが書き込めない場合は，設定を以下のように変えてみましょう</p>
+<p>ツール &gt;　Upload Speed : 460800</p>
+<hr>
+<h1 id="3%E5%85%89%E3%82%BB%E3%83%B3%E3%82%B5%E3%81%AE%E6%83%85%E5%A0%B1%E3%82%92%E5%8F%96%E5%BE%97%E3%81%97%E3%81%A6firebase%E3%81%AB%E8%A8%98%E9%8C%B2%E3%81%97%E3%81%A6%E3%81%BF%E3%82%88%E3%81%86">3.光センサの情報を取得してfirebaseに記録してみよう</h1>
+<hr>
+<h3 id="firebase%E3%81%A8%E3%81%AF">firebaseとは</h3>
+<p>Baas（Backend as a Service）の１つ．
+Webアプリケーションやモバイルアプリケーションのバックエンドで行う機能を提供するクラウドサービス．実装者がバックエンド側の実装をすることなく，決められたAPIを叩くだけでクラウド上に用意された機能群を使うことが出来る．</p>
+<h3 id="%E4%BD%BF%E7%94%A8%E3%81%99%E3%82%8B%E3%82%BB%E3%83%B3%E3%82%B5%EF%BC%9A%E5%85%89%E3%82%BB%E3%83%B3%E3%82%B5">使用するセンサ：光センサ</h3>
+<p><img src="./img/light.JPG" alt=""></p>
+<hr>
+<h2 id="3%E5%85%89%E3%82%BB%E3%83%B3%E3%82%B5%E3%81%AE%E6%83%85%E5%A0%B1%E3%82%92%E5%8F%96%E5%BE%97%E3%81%97%E3%81%A6firebase%E3%81%AB%E8%A8%98%E9%8C%B2%E3%81%97%E3%81%A6%E3%81%BF%E3%82%88%E3%81%86">3.光センサの情報を取得してfirebaseに記録してみよう</h2>
+<h3 id="1-%E5%85%89%E3%82%BB%E3%83%B3%E3%82%B5%E3%81%AE%E5%80%A4%E3%82%92%E7%A2%BA%E8%AA%8D%E3%81%99%E3%82%8B">(1) 光センサの値を確認する</h3>
+<p>Nefry BTのA2 と書かれたソケットに光センサを接続する．</p>
+<p><img src="./img/041.JPG" alt="center"></p>
+<hr>
+<p><span style="font-size:90%">Arduinoを起動し，メニューのファイル &gt; 新規ファイルを選択．
+新規ファイルに以下のプログラムを書き込み，左上の→ボタンを押し，実行．</span></p>
 <pre class="hljs"><code><div>#include &lt;Nefry.h&gt;
 #define PIN A2
 
@@ -422,37 +657,68 @@ void loop()
   {
     sum += analogRead(PIN);
   }
-  // 合計を割って平均を取る
+  // 合計を割って平均を取る
   sum &gt;&gt;= 5;
   Nefry.println(sum);
   Nefry.ndelay(10);
 }
-
 </div></code></pre>
-<p><strong>ツール &gt; シリアルモニタ</strong> からシリアルモニタを開くと値を確認することができる<br>
-<strong>ツール &gt; シリアルプロット</strong> を選択するとグラフで確認することができる<br>
-115200bpsで確認<br>
-<em>同時に二つ開くことはできないので注意</em></p>
 <hr>
-<h2 id="firebase%08%E3%81%B8%E3%81%AE%E8%A8%98%E9%8C%B2">Firebaseへの記録</h2>
-<p>プロジェクトの作成</p>
-<p><img src="img/001.png" alt=""></p>
+<h2 id="3%E5%85%89%E3%82%BB%E3%83%B3%E3%82%B5%E3%81%AE%E6%83%85%E5%A0%B1%E3%82%92%E5%8F%96%E5%BE%97%E3%81%97%E3%81%A6firebase%E3%81%AB%E8%A8%98%E9%8C%B2%E3%81%97%E3%81%A6%E3%81%BF%E3%82%88%E3%81%86">3.光センサの情報を取得してfirebaseに記録してみよう</h2>
+<h3 id="1-%E5%85%89%E3%82%BB%E3%83%B3%E3%82%B5%E3%81%AE%E5%80%A4%E3%82%92%E7%A2%BA%E8%AA%8D%E3%81%99%E3%82%8B">(1) 光センサの値を確認する</h3>
+<ul>
+<li>ツール &gt; シリアルモニタ(command+shift+M) を選択し，
+115200bpsに設定すると値を確認できる．</li>
+<li>ツール &gt; シリアルプロット(command+shift+L) を選択し，
+115200bpsに設定するとグラフで可視化される</li>
+</ul>
+<p>※注意：同時に2つ開くことはできない</p>
+<p>※音センサも同じプログラムで実行可能</p>
 <hr>
-<p> 左の「Database」を選択して「Realtime Database」を選択</p>
-<p><img src="img/002.png" alt=""></p>
+<h3 id="2-firebase%E3%81%B8%E3%81%AE%E8%A8%98%E9%8C%B2">(2) Firebaseへの記録</h3>
+<ol>
+<li>Firebase を開く　https://firebase.google.com/?hl=ja</li>
+<li>スタートガイドをクリック</li>
+</ol>
+<p><img src="./img/031.png" alt="center"></p>
 <hr>
-<p>テストモードを選択</p>
-<p><img src="img/003.png" alt=""></p>
+<h3 id="2-firebase%E3%81%B8%E3%81%AE%E8%A8%98%E9%8C%B2">(2) Firebaseへの記録</h3>
+<ol start="3">
+<li>
+<ul>
+<li>プロジェクト名　nefry</li>
+<li>アナリティクスと課金の地域　日本
+と設定し，プロジェクトを作成</li>
+</ul>
+</li>
+</ol>
+<p><img src="./img/001.png" alt="center"></p>
 <hr>
-<p>databaseのURLをメモ</p>
-<p><img src="img/004.png" alt=""></p>
+<h3 id="2-firebase%E3%81%B8%E3%81%AE%E8%A8%98%E9%8C%B2">(2) Firebaseへの記録</h3>
+<p>4.「Database」を選択し，「Realtime Database」を選択</p>
+<p><img src="./img/032.png" alt=""><img src="./img/002.png" alt=""></p>
 <hr>
-<p>Nefryに以下のコードを書き込む<br>
-FIREBASE_HOSTの部分はメモしたものを記述(https://は抜いて)<br>
-値がリアルタイムで更新されるのが確認できる</p>
-<pre class="hljs"><code><div>#define FIREBASE_HOST &quot;xxxx.firebaseio.com&quot;
+<h3 id="2-firebase%E3%81%B8%E3%81%AE%E8%A8%98%E9%8C%B2">(2) Firebaseへの記録</h3>
+<p>5.「テストモードで開始」を選択し，「有効にする」をクリック</p>
+<p><img src="img/003.png" alt=" center"></p>
+<hr>
+<h3 id="2-firebase%E3%81%B8%E3%81%AE%E8%A8%98%E9%8C%B2">(2) Firebaseへの記録</h3>
+<p>6.databaseのURLをコピーしておく</p>
+<p><img src="img/004.png" alt=" center"></p>
+<hr>
+<h3 id="2-firebase%E3%81%B8%E3%81%AE%E8%A8%98%E9%8C%B2">(2) Firebaseへの記録</h3>
+<ol start="7">
+<li>Nefryに以下のコードを書き込む<br>
+FIREBASE_HOSTは先程コピーしたものを記述(https:// は除く)</li>
+</ol>
+<!--![1%](img/script.png)-->
+<pre class="hljs"><code><div>#include &lt;Nefry.h&gt;
+#include &lt;NefryFireBase.h&gt;
+#define PIN A2
+#define FIREBASE_HOST &quot;xxxx.firebaseio.com&quot;
 
 NefryFireBase firebase;
+
 void setup()
 {
   pinMode(PIN,INPUT);
@@ -463,16 +729,21 @@ void loop()
 {
   DataElement elem = DataElement();
   elem.setValue(&quot;sensor&quot;, analogRead(PIN));
-  firebase.write(&quot;Nefry&quot;, &amp;elem);//FireBaseのデータを書き込みます
+  firebase.write(&quot;Nefry&quot;, &amp;elem);//FireBaseのデータを書き込む
   Nefry.ndelay(1000);
 }
 </div></code></pre>
-<h2 id="web%E3%83%9A%E3%83%BC%E3%82%B8%E3%82%92%E4%BD%9C%E3%81%A3%E3%81%A6%E5%80%A4%E3%82%92%E5%8F%96%E5%BE%97%E3%81%99%E3%82%8B">webページを作って値を取得する</h2>
-<p>htmlのページを自作してブラウザから値を確認する。<br>
-以下のソースのdatabaseURLを変更して使用する。<br>
-更新すると値が確認できる。</p>
+<hr>
+<h3 id="2-firebase%E3%81%B8%E3%81%AE%E8%A8%98%E9%8C%B2">(2) Firebaseへの記録</h3>
+<ol start="8">
+<li>光センサの値がFireBaseでリアルタイムに更新されるのが確認できる
+<img src="img/033.png" alt=" center"></li>
+</ol>
+<hr>
+<h2 id="3-web%E3%83%9A%E3%83%BC%E3%82%B8%E3%82%92%E4%BD%9C%E6%88%90%E3%81%97%E3%83%96%E3%83%A9%E3%82%A6%E3%82%B6%E3%81%A7%E5%85%89%E3%82%BB%E3%83%B3%E3%82%B5%E3%81%AE%E5%80%A4%E3%82%92%E8%A1%A8%E7%A4%BA">(3) webページを作成し,ブラウザで光センサの値を表示</h2>
+<hr>
+<p>以下のソースコードのdatabaseURLを変更し，htmlページを作成．</p>
 <pre class="hljs"><code><div>&lt;html&gt;
-
 &lt;body&gt;
     &lt;p&gt;
         &lt;div id=&quot;sensor&quot;&gt;&lt;/div&gt;
@@ -494,27 +765,99 @@ void loop()
             });
     &lt;/script&gt;
 &lt;/body&gt;
-
 &lt;/html&gt;
-
 </div></code></pre>
 <hr>
-<h1 id="%E4%BB%98%E9%8C%B2%08%E4%BB%96%E3%81%AE%E3%82%BB%E3%83%B3%E3%82%B5%E3%81%AE%E4%BD%BF%E3%81%84%E6%96%B9">付録(他のセンサの使い方)</h1>
-<p>ここからは光センサ以外のセンサーや出力装置のサンプルコードを紹介する<br>
-サンプルによってはArduino IDEに外部ライブラリのインストールが必要になる</p>
-<h1 id="%E3%82%B5%E3%83%BC%E3%83%9C%E3%83%A2%E3%83%BC%E3%82%BF">サーボモータ</h1>
-<pre class="hljs"><code><div>//Groveケーブルを接続するGroveコネクターを１つ選んで#define文に記載してください。
-// Nefry BT無印の場合： D2, A0, A2 (注：D0は使えません）
-// Nefry BT R2の場合： D0, D2, D5, A1  (注：A0を使うときはA1を記載します)
-#define PIN D2
+<h3 id="3web%E3%83%9A%E3%83%BC%E3%82%B8%E3%82%92%E4%BD%9C%E6%88%90%E3%81%97%EF%BC%8C%E3%83%96%E3%83%A9%E3%82%A6%E3%82%B6%E3%81%A7%E5%85%89%E3%82%BB%E3%83%B3%E3%82%B5%E3%81%AE%E5%80%A4%E3%82%92%E8%A1%A8%E7%A4%BA">(3)webページを作成し，ブラウザで光センサの値を表示</h3>
+<p>Command+R or 左上の更新ボタン で更新すると，
+光センサの値が確認できる．
+<img src="./img/034.png" alt="center"></p>
+<hr>
+<h1 id="%E4%BB%98%E9%8C%B2%E4%BB%96%E3%81%AE%E3%82%BB%E3%83%B3%E3%82%B5%E3%81%AE%E4%BD%BF%E3%81%84%E6%96%B9">付録(他のセンサの使い方)</h1>
+<p>光センサ以外のセンサーや出力装置のサンプルコードを紹介</p>
+<p>サンプルによってはArduino IDEに外部ライブラリのインストールが必要</p>
+<p>参考ページ http://wiki.seeedstudio.com/Sensor/</p>
+<hr>
+<h3 id="%E3%82%BB%E3%83%B3%E3%82%B5%E4%B8%80%E8%A6%A7-httpwikiseeedstudiocom">センサ一覧     　　 http://wiki.seeedstudio.com/</h3>
+<p>サーボモータ</p>
+<p><img src="./img/motor.jpg" alt=""><img src="./img/motor_hone.jpg" alt=""></p>
+<p>光センサ/音センサ/傾きセンサ/水センサ</p>
+<p><img src="./img/light.jpg" alt=""><img src="./img/sound.jpg" alt=""><img src="./img/katamuki.jpg" alt=""><img src="./img/water.jpg" alt=""></p>
+<p>モーションセンサ/温度湿度センサ/LEDbarセンサ</p>
+<p><img src="./img/motion.jpg" alt=""><img src="./img/temp,humid.jpg" alt=""><img src="./img/ledbar.jpg" alt=""></p>
+<p>その他→ https://dotstud.io/docs/grove/</p>
+<hr>
+<h4 id="%E9%9F%B3%E3%82%BB%E3%83%B3%E3%82%B5">音センサ</h4>
+<p><img src="./img/sound.jpg" alt="">  http://wiki.seeedstudio.com/Grove-Sound_Sensor/</p>
+<p>A0に接続し，下記プログラムを実行．</p>
+<p>ツール &gt; シリアルモニタ or シリアルプロットで値を確認できる</p>
+<pre class="hljs"><code><div>const int pinAdc = A0;
+void setup()
+{
+ Serial.begin(115200);
+}
+void loop()
+{
+ long sum = 0;
+ for(int i=0; i&lt;32; i++)
+ {
+ sum += analogRead(pinAdc);  //32回計測
+ }
+sum &gt;&gt;= 5; // 平均を算出 
+Serial.println(sum);
+delay(10); //10ms周期で計測
+}
+</div></code></pre>
+<hr>
+<h4 id="%E5%82%BE%E5%90%91%E3%82%BB%E3%83%B3%E3%82%B5%E6%B0%B4%E3%82%BB%E3%83%B3%E3%82%B5%E9%9F%B3%E3%82%BB%E3%83%B3%E3%82%B5">傾向センサ/水センサ(/音センサ)</h4>
+<p><img src="./img/katamuki.jpg" alt=""><img src="./img/water.jpg" alt=""><img src="./img/sound.jpg" alt=""></p>
+<pre class="hljs"><code><div>#define PIN D2
 
+void setup()
+{
+ Serial.begin(115200);
+ pinMode(PIN,INPUT);
+}
+
+void loop()
+{
+  int v = digitalRead(PIN);
+  Serial.println(v);
+  delay(10);
+}
+</div></code></pre>
+<p>ツール &gt; シリアルモニタ or シリアルプロットで値を確認できる</p>
+<hr>
+<h4 id="%E3%83%A2%E3%83%BC%E3%82%B7%E3%83%A7%E3%83%B3%E3%82%BB%E3%83%B3%E3%82%B5-%E5%8B%95%E3%81%8D%E3%81%AE%E3%81%82%E3%82%8B%E4%BA%BA%E3%82%92%E6%A4%9C%E7%9F%A5">モーションセンサ (動きのある人を検知)</h4>
+<p><img src="./img/motion.jpg" alt=""></p>
+<pre class="hljs"><code><div>#define PIN D2
+
+void setup()
+{
+ Serial.begin(115200);
+ pinMode(PIN,INPUT);
+}
+
+void loop()
+{
+ if(digitalRead(PIN))//if it detects the moving people?
+    Serial.println(&quot;Hi,people is coming&quot;);
+ else
+    Serial.println(&quot;Watching&quot;);
+
+ delay(200);
+}
+</div></code></pre>
+<hr>
+<h4 id="%E3%82%B5%E3%83%BC%E3%83%9C%E3%83%A2%E3%83%BC%E3%82%BF">サーボモータ</h4>
+<p><img src="./img/043.png" alt=""></p>
+<hr>
+<pre class="hljs"><code><div>#include &lt;Nefry.h&gt; // Nefryのライブラリをインクルード
+#define PIN D2
 // LEDCのパラメータ設定
-//   LEDC_CHANNEL        : チャンネル : 0
-//   LEDC_RESOLUTION_BITS: 目盛数    : 10bit (0〜1023)
-//   LEDC_FREQUENCY  : 周波数    : 50Hz (= 20ms周期)
-#define LEDC_CHANNEL 0
-#define LEDC_RESOLUTION_BITS 10
-#define LEDC_FREQUENCY 50
+#define LEDC_CHANNEL 0           //  チャンネル : 0
+#define LEDC_RESOLUTION_BITS 10 // 目盛数 : 10bit (0〜1023)
+#define LEDC_FREQUENCY 50      //周波数 : 50Hz (= 20ms周期)
 
 //  30/1024*20ms = 0.59ms
 //  77/1024*20ms = 1.50ms
@@ -538,73 +881,20 @@ void loop() {
   }
 }
 </div></code></pre>
-<h1 id="%E5%82%BE%E5%90%91%E3%82%BB%E3%83%B3%E3%82%B5%E3%83%A2%E3%83%BC%E3%82%B7%E3%83%A7%E3%83%B3%E3%82%BB%E3%83%B3%E3%82%B5%E6%B0%B4%E3%82%BB%E3%83%B3%E3%82%B5">傾向センサ/モーションセンサ/水センサ</h1>
-<p>http://wiki.seeedstudio.com/Grove-Tilt_Switch/</p>
-<p>ON: 10° ~170°
-OFF: 190° ~350°</p>
-<pre class="hljs"><code><div>
-
-// test code for Grove - Sound Sensor
-// loovee @ 2016-8-30
-
-#define PIN D2
-
-void setup()
-{
- Serial.begin(115200);
- pinMode(PIN,INPUT);
-}
-
-void loop()
-{
-  int v = digitalRead(PIN);
-  Serial.println(v);
-  delay(10);
-}
-</div></code></pre>
-<h1 id="led-bar">LED bar</h1>
-<pre class="hljs"><code><div>/*
-Grove LED Bar - Level Example
-This example will show you how to use setLevel() function of this library.
-The setLevel() function illuminates the given number of LEDs from either side.
-
-Syntax setLevel(level)
-0  = all LEDs off
-5  = 5 LEDs on
-10 = all LEDs on
-*/
-
-#include &lt;Grove_LED_Bar.h&gt;
-
-Grove_LED_Bar bar(D3, D2, 0);  // Clock pin, Data pin, Orientation
-
-void setup()
-{
-  // nothing to initialize
-  bar.begin();
-}
-
-void loop()
-{
-  // Walk through the levels
-  for (int i = 0; i &lt;= 10; i++)
-  {
-    bar.setLevel(i);
-    delay(100);
-  }
-}
-</div></code></pre>
-<h1 id="%E6%B8%A9%E6%B9%BF%E5%BA%A6%E3%82%BB%E3%83%B3%E3%82%B5">温湿度センサ</h1>
-<p>以下のライブラリをインストールするする<br>
-https://github.com/adafruit/Adafruit_Sensor<br>
-https://github.com/adafruit/DHT-sensor-library</p>
-<h3 id="%E5%A4%96%E9%83%A8%E3%83%A9%E3%82%A4%E3%83%96%E3%83%A9%E3%83%AA%E3%83%BC%E3%81%AE%E3%82%A4%E3%83%B3%E3%83%9D%E3%83%BC%E3%83%88%E3%81%AE%E4%BB%95%E6%96%B9">外部ライブラリーのインポートの仕方</h3>
-<p>zip形式でダウンロード</p>
-<p><img src="img/005.png" alt=""></p>
-<p>Arduino IDE<br>
-スケッチ &gt; ライブラリをインクルード &gt; ZIP形式のライブラリをインストール</p>
-<p><img src="img/006.png" alt="">
-<img src="img/007.png" alt=""></p>
+<hr>
+<h4 id="%E6%B8%A9%E5%BA%A6%E6%B9%BF%E5%BA%A6%E3%82%BB%E3%83%B3%E3%82%B5">温度湿度センサ</h4>
+<p>以下のライブラリをインストールする</p>
+<p>https://github.com/adafruit/Adafruit_Sensor</p>
+<p>https://github.com/adafruit/DHT-sensor-library</p>
+<hr>
+<h3 id="%E5%A4%96%E9%83%A8%E3%83%A9%E3%82%A4%E3%83%96%E3%83%A9%E3%83%AA%E3%81%AE%E3%82%A4%E3%83%B3%E3%83%9D%E3%83%BC%E3%83%88%E3%81%AE%E6%96%B9%E6%B3%95">外部ライブラリのインポートの方法</h3>
+<p>1.zip形式でダウンロード</p>
+<p><img src="img/005.png" alt="center"></p>
+<hr>
+<p>2.Arduino IDEを起動し，スケッチ &gt; ライブラリをインクルード &gt; ZIP形式のライブラリをインストール</p>
+<p><img src="img/006.png" alt=""><img src="img/007.png" alt=""></p>
+<hr>
+<p><img src="./img/script2.png" alt=""></p>
 <hr>
 <pre class="hljs"><code><div>#include &lt;Nefry.h&gt; // Nefryのライブラリをインクルード
 
@@ -635,7 +925,6 @@ void loop() {
 
   float hif = dht.computeHeatIndex(f, h);
   float hic = dht.computeHeatIndex(t, h, false);
-
   Nefry.print(&quot;Humidity: &quot;);    // SerialをNefryへ変更
   Nefry.print(h);               // SerialをNefryへ変更
   Nefry.print(&quot; %\t&quot;);          // SerialをNefryへ変更
@@ -651,139 +940,38 @@ void loop() {
   Nefry.println(&quot; *F&quot;);         // SerialをNefryへ変更
 }
 </div></code></pre>
-<p>Nefryのディフォルトプログラム</p>
-<pre class="hljs"><code><div>#include &lt;NefryIFTTT.h&gt;
-#include &lt;WiFiClientSecure.h&gt;
+<hr>
+<h4 id="ledbar%E3%82%BB%E3%83%B3%E3%82%B5">LEDbarセンサ</h4>
+<ol>
+<li>ライブラリ https://github.com/Seeed-Studio/Grove_LED_Bar をダウンロード</li>
+<li>Arduino IDEを起動し，スケッチ &gt; ライブラリをインクルード &gt; ZIP形式のライブラリをインストール</li>
+<li>スケッチ例 &gt; Grove LED Bar &gt;Levelをクリック</li>
+</ol>
+<p><img src="./img/042.png" alt="center"></p>
+<hr>
+<h4 id="ledbar%E3%82%BB%E3%83%B3%E3%82%B5">LEDbarセンサ</h4>
+<ol start="4">
+<li>下記プログラムを実行</li>
+</ol>
+<pre class="hljs"><code><div>#include &lt;Grove_LED_Bar.h&gt;
+//Clock pin,Data pin, Orientation
+Grove_LED_Bar bar(D3, D2, 0);
 
-String Event, SecretKey, LineAuth, SendMessageLINE;
-WiFiClientSecure client;
-String StrPerEncord(const char* c_str);
-String escapeParameter(String param);
-void LineSend();
-
-void setup() {
-  Nefry.setStoreTitle(&quot;SecretKey&quot;, 0); //Nefry DataStoreのタイトルを指定
-  Nefry.setStoreTitle(&quot;Event&quot;, 1);    //Nefry DataStoreのタイトルを指定
-  Nefry.setStoreTitle(&quot;LINE Auth&quot;, 2); //Nefry DataStoreのタイトルを指定
-  Nefry.setStoreTitle(&quot;LINEMessage&quot;, 3);    //Nefry DataStoreのタイトルを指定
-  SecretKey = Nefry.getStoreStr(0);   //Nefry DataStoreからデータを取得
-  Event = Nefry.getStoreStr(1);       //Nefry DataStoreからデータを取得
-  LineAuth = Nefry.getStoreStr(2);   //Nefry DataStoreからデータを取得
-  SendMessageLINE = Nefry.getStoreStr(3);       //Nefry DataStoreからデータを取得
-  Nefry.enableSW();                   //SW有効化
-  Nefry.setProgramName(&quot;NefryBT Default Program&quot;);
+void setup()
+{
+  // nothing to initialize
+  bar.begin();
 }
 
-void loop() {
-  if (Nefry.readSW()) {               //SWを押した時
-    if (!SecretKey.equals(&quot;&quot;) &amp;&amp; !Event.equals(&quot;&quot;)) {
-      if (!IFTTT.send(Event, SecretKey)) {//IFTTTにデータを送信
-        Nefry.setLed(255, 0, 0);        //Errの時、赤色点灯
-      }
-    }
-    if (!LineAuth.equals(&quot;&quot;)) {
-      if (SendMessageLINE.equals(&quot;&quot;))SendMessageLINE = &quot;Welcome to the NefryBT world!&quot;;
-      LineSend();                     //LINE送信
-    }
-    Nefry.ndelay(1000);               //送信後1秒間待つ
-  }
-  Nefry.setLed(random(255), random(255), random(255));
-  Nefry.ndelay(500);               //送信後0.5秒間待つ
-}
-
-void LineSend() {
-  const char* host = &quot;notify-api.line.me&quot;;
-  Serial.println(&quot;\nStarting connection to server...&quot;);
-  if (!client.connect(host, 443)) {
-    Serial.println(&quot;Connection failed!&quot;);
-  } else {
-    Serial.println(&quot;Connected to server!&quot;);
-    String url = &quot;/api/notify&quot;;
-    url += &quot;?message=&quot;;
-    url += StrPerEncord(escapeParameter(SendMessageLINE).c_str());
-    Serial.println(StrPerEncord(SendMessageLINE.c_str()));
-    Serial.println(url);
-    client.print(String(&quot;POST &quot;) + url + &quot; HTTP/1.1\r\n&quot; +
-                 &quot;Authorization: Bearer &quot; + LineAuth + &quot;\r\n&quot; +
-                 &quot;Content-Type: application/x-www-form-urlencoded\r\n&quot; +
-                 &quot;Host: &quot; + host + &quot;\r\n&quot; +
-                 &quot;Connection: close\r\n\r\n&quot;);
-    client.println();
-    unsigned long timeout = millis();
-    while (client.available() == 0) {
-      if (millis() - timeout &gt; 5000) {
-        Serial.println(&quot;&gt;&gt;&gt; Client Timeout !&quot;);
-        client.stop();
-        return;
-      }
-    }
-    // Read all the lines of the reply from server and print them to Serial
-    while (client.available()) {
-      String line = client.readStringUntil('\r');
-      Serial.print(line);
-    }
-    Serial.println();
-    Serial.println(&quot;closing connection&quot;);
+void loop()
+{
+  // Walk through the levels
+  for (int i = 0; i &lt;= 10; i++)
+  {
+    bar.setLevel(i);
+    delay(100);
   }
 }
-//********************UTF-8文字列をパーセントエンコード*************************
-String StrPerEncord(const char* c_str) {
-  uint16_t i = 0;
-  String str_ret = &quot;&quot;;
-  char c1[3], c2[3], c3[3];
-
-  while (c_str[i] != '\0') {
-    if (c_str[i] &gt;= 0xC2 &amp;&amp; c_str[i] &lt;= 0xD1) { //2バイト文字
-      sprintf(c1, &quot;%2x&quot;, c_str[i]);
-      sprintf(c2, &quot;%2x&quot;, c_str[i + 1]);
-      str_ret += &quot;%&quot; + String(c1) + &quot;%&quot; + String(c2);
-      i = i + 2;
-    } else if (c_str[i] &gt;= 0xE2 &amp;&amp; c_str[i] &lt;= 0xEF) {
-      sprintf(c1, &quot;%2x&quot;, c_str[i]);
-      sprintf(c2, &quot;%2x&quot;, c_str[i + 1]);
-      sprintf(c3, &quot;%2x&quot;, c_str[i + 2]);
-      str_ret += &quot;%&quot; + String(c1) + &quot;%&quot; + String(c2) + &quot;%&quot; + String(c3);
-      i = i + 3;
-    } else {
-      str_ret += String(c_str[i]);
-      i++;
-    }
-  }
-  return str_ret;
-}
-
-String escapeParameter(String param) {
-  param.replace(&quot;%&quot;, &quot;%25&quot;);
-  param.replace(&quot;+&quot;, &quot;%2B&quot;);
-  param.replace(&quot; &quot;, &quot;+&quot;);
-  param.replace(&quot;\&quot;&quot;, &quot;%22&quot;);
-  param.replace(&quot;#&quot;, &quot;%23&quot;);
-  param.replace(&quot;$&quot;, &quot;%24&quot;);
-  param.replace(&quot;&amp;&quot;, &quot;%26&quot;);
-  param.replace(&quot;'&quot;, &quot;%27&quot;);
-  param.replace(&quot;(&quot;, &quot;%28&quot;);
-  param.replace(&quot;)&quot;, &quot;%29&quot;);
-  param.replace(&quot;*&quot;, &quot;%2A&quot;);
-  param.replace(&quot;,&quot;, &quot;%2C&quot;);
-  param.replace(&quot;/&quot;, &quot;%2F&quot;);
-  param.replace(&quot;:&quot;, &quot;%3A&quot;);
-  param.replace(&quot;;&quot;, &quot;%3B&quot;);
-  param.replace(&quot;&lt;&quot;, &quot;%3C&quot;);
-  param.replace(&quot;=&quot;, &quot;%3D&quot;);
-  param.replace(&quot;&gt;&quot;, &quot;%3E&quot;);
-  param.replace(&quot;?&quot;, &quot;%3F&quot;);
-  param.replace(&quot;@&quot;, &quot;%40&quot;);
-  param.replace(&quot;[&quot;, &quot;%5B&quot;);
-  param.replace(&quot;\\&quot;, &quot;%5C&quot;);
-  param.replace(&quot;]&quot;, &quot;%5D&quot;);
-  param.replace(&quot;^&quot;, &quot;%5E&quot;);
-  param.replace(&quot;'&quot;, &quot;%60&quot;);
-  param.replace(&quot;{&quot;, &quot;%7B&quot;);
-  param.replace(&quot;|&quot;, &quot;%7C&quot;);
-  param.replace(&quot;}&quot;, &quot;%7D&quot;);
-  return param;
-}
-
 </div></code></pre>
 
 </body>
