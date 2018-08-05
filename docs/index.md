@@ -1,4 +1,3 @@
-
 <!-- $theme: default -->
 <!-- page_number: true -->
 <!-- $size: 4:3 -->
@@ -18,7 +17,7 @@ IoTハッカソン 〜business〜 事前勉強会【NefryでIoTハンズオン�
 ===
 https://dotstud.io/docs/nefrybt-ifttt/
 
-![70% center](img/039.png)
+![center](img/039.png)
 
 ---
 
