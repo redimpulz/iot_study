@@ -579,9 +579,8 @@ void loop()
 ```
 
 ---
-
-#### サーボモータ
-![](./img/043.png)
+#### サーボモータ　![](./img/motor.jpg)　![](./img/motor_hone.jpg)
+![110% center](./img/043.png)
 
 ---
 ```
@@ -616,7 +615,10 @@ void loop() {
 ```
 
 ---
-#### 温度湿度センサ
+#### 温度湿度センサ　
+
+![](./img/temp,humid.jpg)
+
 以下のライブラリをインストールする
 
 https://github.com/adafruit/Adafruit_Sensor
@@ -635,7 +637,7 @@ https://github.com/adafruit/DHT-sensor-library
 ![](img/006.png)![](img/007.png)
 
 ---
-![](./img/script2.png)
+![center 130%](./img/script2.png)
 
 ---
 ```
@@ -686,7 +688,6 @@ void loop() {
 
 ---
 #### LEDbarセンサ
-
 1. ライブラリ https://github.com/Seeed-Studio/Grove_LED_Bar をダウンロード
 2. Arduino IDEを起動し，スケッチ > ライブラリをインクルード > ZIP形式のライブラリをインストール
 3. スケッチ例 > Grove LED Bar >Levelをクリック
@@ -694,8 +695,10 @@ void loop() {
 ![center](./img/042.png)
 
 ---
-#### LEDbarセンサ
+#### LEDbarセンサ　![](./img/ledbar.jpg)
+
 4. 下記プログラムを実行
+
 ```
 #include <Grove_LED_Bar.h>
 //Clock pin,Data pin, Orientation
