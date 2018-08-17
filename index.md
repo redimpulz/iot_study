@@ -450,6 +450,7 @@ void loop()
 
 ---
 ## (3) webページを作成し,ブラウザで光センサの値を表示
+
 ---
 以下のソースコードのdatabaseURLを変更し，htmlページを作成．
 ```
@@ -580,9 +581,7 @@ void loop()
 
 ---
 #### サーボモータ　![](./img/motor.jpg)　![](./img/motor_hone.jpg)
-![110% center](./img/043.png)
 
----
 ```
 #include <Nefry.h> // Nefryのライブラリをインクルード
 #define PIN D2
@@ -635,9 +634,6 @@ https://github.com/adafruit/DHT-sensor-library
 2.Arduino IDEを起動し，スケッチ > ライブラリをインクルード > ZIP形式のライブラリをインストール
 
 ![](img/006.png)![](img/007.png)
-
----
-![center 130%](./img/script2.png)
 
 ---
 ```
